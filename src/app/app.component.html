@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+
+<div *ngIf="!displayedMovies || !displayedMovies.length">
+  Loading....
+</div>
+
+<div *ngIf="displayedMovies && displayedMovies.length">
+  <div *ngFor="let movie of displayedMovies; trackBy: trackByItem">
+    <div class="movie-card-wrapper">
+      <div class="movie-title">
+        <strong>Title: </strong>
+        {{movie.title}}
+      </div>
+      <div class="movie-body">
+        <strong>Description: </strong>
+        {{movie.body}}
+      </div>
+      <div *ngIf="movie.tags && movie.tags.length" class="movie-tags">
+        <strong>Tags: </strong> 
+        <div *ngFor="let tag of movie.tags; let i = index">
+          {{tag}}
+          <span *ngIf="i !== movie.tags.length - 1">,</span>
+        </div>
+      </div>
+      <div class="movie-reaction">
+        <strong>Reactions: </strong>
+        {{movie.reactions}}
+      </div>
+    </div>
+  </div>
+</div>

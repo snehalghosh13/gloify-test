@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  overflow-y: hidden
+}
+
+.movie-card-wrapper {
+  border: 1px solid black;
+  margin: 20px 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  // box-shadow: 2px 2px 2px 1px blue;
+  .movie-title {
+    
+  } 
+
+  .movie-body {
+    
+  }
+
+  .movie-tags {
+    display: flex;
+    gap: 5px;
+    .tag {
+      flex-wrap: wrap;
+    }
+  }
+
+  .movie-reaction {}
+}
